@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> esta es la plantilla del challenge </h1>
+    <hr></hr>
+    <p style="color:red"> me llamo {{name}}</p>
+    <p style="color:blue"> mi apellido es {{last_name}}</p>
+
+    <h1> en este momento es {{now}}</h1>
+    <hr></hr>
+
+    <h3> estas son mis notas</h3>
+    <ul>
+        {% for grade in my_grades %}
+            <li>{{ grade }}</li>
+        {% endfor %}
+    </ul>
+    <h3>esta son las notas de la facultad.: </h3>
+    <ul>
+        {% for grade in my_grades %}
+            {% if grade < 4 %}
+                <li style="color:crimson" > Bad grade: {{grade}}</li>
+            {% else %}
+                <l1 style="color:blue" > Good grade: {{grade}}</l1>
+            {% endif %}
+        <br> 
+        <br> 
+        <br> 
+        {% endfor %}
+
+    </ul>
+
+</body>
+</html>
